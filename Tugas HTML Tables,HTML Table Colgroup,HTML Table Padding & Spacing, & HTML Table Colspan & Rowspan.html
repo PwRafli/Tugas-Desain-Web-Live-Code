@@ -1,0 +1,261 @@
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>A basic HTML table</h2>
+
+<table style="width:120%">
+  <tr>
+    <th>Matkul Semester 2 (Puasa)</th>
+    <th>Jam</th>
+     <th>Ruangan Lab</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Algoritma dan Struktur Data</td>
+    <th>Senin 08:00-11:00</th>
+     <th>Lab Pemograman</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Desain Grafis</td>
+    <th>Senin 12:00-13:80</th>
+     <th>Lab Basis Data</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Desain Web</td>
+    <th>Selasa 09:00-10:30</th>
+     <th>Lab Basis Data</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Praktikum Database</td>
+    <th>Rabu 10:00-11:30</th>
+     <th>Lab Basis Data</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Database Non Relational</td>
+    <th>Rabu 12:00-13:30</th>
+     <th>Lab Multimedia-Lab Basis Data</th>
+  </tr>
+  <tr>
+    <td>SP2.1-SM2.1 Bahasa Inggris Teknik</td>
+    <th>Rabu 15:00-16:00</th>
+     <th>Ruang Aula</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Pemrograman Berbasis Jaringan</td>
+    <th>Kamis 09:00-11:00</th>
+     <th>Lab Basis Data</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Praktikum Algoritma dan Pemrograman</td>
+    <th>Kamis 12:00-13:00</th>
+     <th>Lab Pemograman</th>
+  </tr>
+</table>
+
+<p>To understand the example better, we have added borders to the table.</p>
+
+</body>
+</html>
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Colgroup</h2>
+<p>Jatwal semua matkul bulan puasa</p>
+
+<table style="width: 200%;">
+<colgroup>
+  <col span="5" style="background-color: #57B4BA">
+</colgroup>
+<tr>
+<th>Senin</th>
+<th>Senin</th>
+<th>Selasa</th>
+<th>Rabu</th>
+<th>Rabu</th>
+<th>Rabu</th>
+<th>Kamis</th>
+<th>Kamis</th>
+</tr>
+<tr>
+<td>SP2.1 Algoritma dan Struktur Data</td>
+<td>SP2.1 Desain Grafis</td>
+<td>SP2.1 Desain Web</td>
+<td>SP2.1 Praktikum Database</td>
+<td>SP2.1 Database Non Relational</td>
+<td>SP2.1-SM2.1 Bahasa Inggris Teknik</td>
+<td>SP2.1 Pemrograman Berbasis Jaringan</td>
+<td>SP2.1 Praktikum Algoritma dan Pemrograman</td>
+</tr>
+<tr>
+<th>Senin 08:00-11:00</th>
+<th>Senin 12:00-13:80</th>
+<td>Selasa 09:00-10:30</td>
+<th>Rabu 10:00-11:30</th>
+<th>Rabu 12:00-13:30</th>
+<th>Rabu 15:00-16:00</th>
+<th>Kamis 09:00-11:00</th>
+<th>Kamis 12:00-13:00</th>
+</tr>
+<tr>
+<th>Lab Pemograman</th>
+<th>Lab Basis Data</th>
+<th>Lab Basis Data</th>
+<th>>Lab Basis Data</th>
+<th>Lab Multimedia-Lab Basis Data</th>
+<th>Ruang Aula</th>
+<th>Lab Basis Data</th>
+<th>Lab Pemograman</th>
+</tr>
+</table>
+
+</body>
+</html>
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Cell that spans two columns</h2>
+<p>To make a cell span more than one column, use the colspan attribute.</p>
+
+<table style="width:110%">
+  <tr>
+    <th colspan="2">Nama Dosen Matkul</th>
+    <th>Semester</th>
+  </tr>
+  <tr>
+    <td>SP2.1 Algoritma dan Struktur Data</td>
+    <td>Pelsri Ramadar N.S., M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Desain Grafis</td>
+    <td>Rachman Yulianto, S.Kom, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Desain Web</td>
+    <td>Agus Eko Musantono, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Praktikum Database</td>
+    <td>Sulaibatul Aslamiyah, S.Kom, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Database Non Relational</td>
+    <td>Sulaibatul Aslamiyah, S.Kom, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1-SM2.1 Bahasa Inggris Teknik</td>
+    <td>Wulan Wangi, M.Pd</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Pemrograman Berbasis Jaringan</td>
+    <td>Yoyon Arie Budi, ST, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+  <tr>
+    <td>SP2.1 Praktikum Algoritma dan Pemrograman</td>
+    <td>Faruk Alfiyan, S.Kom, M.Kom</td>
+    <td>Semester 2</td>
+  </tr>
+</table>
+</body>
+</html>
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+</style>
+</head>
+<body>
+
+<h2>Cellpadding - top - bottom - left - right </h2>
+<p>Trending Games in 2025</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Name Game</th>
+    <th>game developer</th> 
+    <th>Year of publication</th>
+  </tr>
+  <tr>
+    <td>Honkai Impact3 Rd</td>
+    <td>Hoyoverse</td>
+    <td>Date 14 Oktober 2016</td>
+  </tr>
+  <tr>
+    <td>Gensin Impact</td>
+    <td>Hoyoverse</td>
+    <td>Date 28 September 2020</td>
+  </tr>
+  <tr>
+    <td>Honkai Star: Rail</td>
+    <td>Hoyoverse</td>
+    <td>Date 26 April 2023</td>
+    </tr>
+   <tr>
+    <td>Zenless Zone Ziro</td>
+    <td>Hoyoverse</td>
+    <td>Date July 4, 2024</td>
+    </tr>
+ <tr>
+    <td>Punishing: Gray Raven</td>
+    <td>Kuro Game</td>
+    <td>Date 16 Juli 2021 </td>
+  </tr>
+  <tr>
+    <td>wuthering waves</td>
+    <td>Kuro Game</td>
+    <td>Date 21 Maret 2025</td>
+  </tr>
+  <tr>
+    <td>Blue Archive</td>
+    <td>yostar games</td>
+    <td>Date 2017.9</td>
+  </tr>
+  <tr>
+    <td>Azur Lane</td>
+    <td>yostar games</td>
+    <td>Date 2021.2</td>
+  </tr>
+ 
+  
+</table>
+
+</body>
+</html>
