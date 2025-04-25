@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Formulir Lengkap</title>
+</head>
+
+<body>
+
+    <h1>Formulir</h1>
+    <h2>HTML Forms</h2>
+
+    <form action="/action_page.php">
+
+        <fieldset>
+            <legend>Isi Formulir Pendaftaran</legend>
+
+            <label for="fname">Nama Lengkap:</label><br>
+            <input type="text" id="fname" name="fname" value="Rey"><br><br>
+
+            <label for="id">Nomer ID:</label><br>
+            <input type="text" id="id" name="id" value="GmId234"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="GamersId@gmail.com"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" value="Gamers123"><br><br>
+
+            <label for="tanggal">Tanggal Lahir:</label><br>
+            <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="gender" value="pria">
+            <label for="pria">Pria</label><br>
+            <input type="radio" id="wanita" name="gender" value="wanita">
+            <label for="wanita">Wanita</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informasi Tambahan</legend>
+
+            <label for="negara">Negara:</label><br>
+            <select id="negara" name="negara">
+                <option value="indonesia">Indonesia</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="singapura">Singapura</option>
+                <option value="thailand">Thailand</option>
+            </select><br><br>
+
+            <label for="jurusan">Jurusan:</label><br>
+            <select id="jurusan" name="jurusan">
+                <option value="ti">Teknik Informatika</option>
+                <option value="dg">Desain Grafis</option>
+                <option value="diploma">Diploma</option>
+            </select><br><br>
+
+            <label for="agama">Agama:</label><br>
+            <select id="agama" name="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="buddha">Buddha</option>
+                <option value="hindu">Hindu</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobi dan Keahlian</legend>
+
+            <label>Hobi:</label><br>
+            <input type="checkbox" id="hobi1" name="hobi[]" value="membaca">
+            <label for="hobi1">Membaca</label><br>
+            <input type="checkbox" id="hobi2" name="hobi[]" value="berolahraga">
+            <label for="hobi2">Berolahraga</label><br>
+            <input type="checkbox" id="hobi3" name="hobi[]" value="game_esport">
+            <label for="hobi3">Game Esport</label><br>
+            <input type="checkbox" id="hobi4" name="hobi[]" value="berkebun">
+            <label for="hobi4">Berkebun</label><br><br>
+
+            <label>Keahlian:</label><br>
+            <input type="checkbox" id="skill1" name="keahlian[]" value="coding">
+            <label for="skill1">Coding</label><br>
+            <input type="checkbox" id="skill2" name="keahlian[]" value="desain_web">
+            <label for="skill2">Desain Web</label><br>
+            <input type="checkbox" id="skill3" name="keahlian[]" value="css">
+            <label for="skill3">CSS</label><br>
+            <input type="checkbox" id="skill4" name="keahlian[]" value="html_php">
+            <label for="skill4">HTML/PHP</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pesan Tambahan</legend>
+
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <p>Mohon periksa kembali formulir ini dengan benar dan teliti karena data akan disesuaikan dengan data di pusat.</p>
+
+</body>
+
+</html>
