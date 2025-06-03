@@ -1,0 +1,71 @@
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 20px 0;
+}
+
+/* Translate */
+#translate {
+    transform: translate(50px, 20px);
+}
+
+/* Rotate */
+#rotateKanan {
+    transform: rotate(20deg);
+}
+
+#rotateKiri {
+    transform: rotate(-20deg);
+}
+
+/* Scale */
+#scaleBesar {
+    transform: scale(1.5, 1.5);
+}
+
+#scaleKecil {
+    transform: scale(0.5, 0.5);
+}
+
+/* ScaleX */
+#scaleXLebar {
+    transform: scaleX(2);
+}
+
+#scaleXKecil {
+    transform: scaleX(0.5);
+}
+
+/* ScaleY */
+#scaleYTinggi {
+    transform: scaleY(2);
+}
+
+#scaleYPendek {
+    transform: scaleY(0.5);
+}
+
+/* Skew */
+#skewX {
+    transform: skewX(30deg);
+}
+
+#skewY {
+    transform: skewY(30deg);
+}
+
+#skew1 {
+    transform: skew(30deg, 20deg);
+}
+
+#skew2 {
+    transform: skew(-30deg, -20deg);
+}
+
+/* Matrix */
+#matrix {
+    /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+    transform: matrix(1, 0.3, 0.3, 1, 50, 20);
+}
