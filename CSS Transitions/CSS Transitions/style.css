@@ -1,0 +1,107 @@
+#hover1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+
+#hover1:hover {
+    width: 300px;
+}
+
+#hover2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 4s;
+}
+
+#hover2:hover {
+    width: 300px;
+    height: 300px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: width 2s;
+}
+
+#div1 {
+    transition-timing-function: linear;
+}
+
+#div2 {
+    transition-timing-function: ease;
+}
+
+#div3 {
+    transition-timing-function: ease-in;
+}
+
+#div4 {
+    transition-timing-function: ease-out;
+}
+
+#div5 {
+    transition-timing-function: ease-in-out;
+}
+
+div:hover {
+    width: 300px;
+}
+
+#hover4 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+
+#hover4:hover {
+    width: 300px;
+}
+
+#hover5 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+#hover5:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+#hover6 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+#hover6:hover {
+    width: 300px;
+}
+
+#hover7 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s linear 1s;
+}
+
+#hover7:hover {
+    width: 300px;
+}
