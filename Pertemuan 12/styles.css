@@ -1,0 +1,286 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    color: #1f2937;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #1f2937;
+    padding: 1rem 0;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #60a5fa;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-box img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+}
+
+.info-box h1 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.info-box p {
+    margin-bottom: 20px;
+    color: #4b5563;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    width: 150px;
+    color: #111827;
+    background-color: #f9fafb;
+}
+
+/* Box Layout */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box {
+    width: 45%;
+    float: left;
+    margin: 2%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.box h2 {
+    margin-bottom: 15px;
+}
+
+.box img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    margin: 0 auto 15px;
+}
+
+/* Column Container */
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px 2%;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+}
+
+.column h3 {
+    margin-bottom: 10px;
+}
+
+.column ul {
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 5px;
+}
+
+
+/* Fixed Layout */
+.header-fixed,
+.footer-fixed {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+}
+
+/* Fluid Layout */
+.container-fluid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background-color: #f9fafb;
+    margin-bottom: 20px;
+}
+
+.column-fluid {
+    flex: 1;
+    min-width: 300px;
+    background-color: #e5e7eb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.column-fluid:hover {
+    transform: translateY(-5px);
+}
+
+.column-fluid h2 {
+    margin-bottom: 10px;
+}
+
+.column-fluid p {
+    margin-bottom: 10px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1f2937;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        z-index: 100;
+    }
+
+    .nav-menu ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .box {
+        width: 96%;
+        float: none;
+    }
+
+    .header-fixed,
+    .footer-fixed {
+        width: 100%;
+    }
+}

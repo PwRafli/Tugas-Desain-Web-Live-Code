@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">PWRafli</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        </div>
+    </header>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Mahasiswa</title>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <div class="photo-box">
+            <img src="SMK.jpg" alt="Foto Rafli">
+        </div>
+
+        <div class="info-box">
+            <h1>Rafli Rahman.Efendy</h1>
+            <p>Mahasiswa Kampus Stikom PGRI</p>
+
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>Rafli Rahman.Efendy</td>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <td>1124102162</td>
+                </tr>
+                <tr>
+                    <th>Agama</th>
+                    <td>Islam</td>
+                </tr>
+                <tr>
+                    <th>Kampus</th>
+                    <td>Stikom PGRI Banyuwangi</td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td>Jl. Bunyu.No 50 LINK Kebun Jeruk</td>
+                </tr>
+                <tr>
+                    <th>Tanggal Lahir</th>
+                    <td>21-09-2002</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu ul');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+<div class="clearfix">
+    <div class="box" style="background-color:#bbb">
+        <h2>Box Image 1</h2>
+        <img src="WhatsApp Image 2025-05-02 at 16.53.37_7de631c9.jpg" alt="Image 1">
+        <p>Keyborad:Vortex Mono Series 75</p>
+        <p>Keycaps: Ukiyo Sea Waves PBT Dye Sub Keycaps 127 Keys</p>
+        <p>Swicth: JX Jade White (Linear 3 - Pin Switch)</p>
+    </div>
+    <div class="box" style="background-color:#ccc">
+        <h2>Box Image 2</h2>
+        <img src="WhatsApp Image 2025-06-07 at 11.02.40_3478ca5b.jpg" alt="Image 2">
+        <p>Keyborad: Zeus 65</p>
+        <p>Keycaps: CHERRY – TOPOGRAPHIC – TOPOGRAPHY WHITE – PBT – DYE SUB</p>
+        <p>Swicth: Shadow Starry Flower - Linea</p>
+    </div>
+</div>
+
+<div class="column-container">
+    <div class="column">
+        <h3>column: Vortex Mono Series</h3>
+        <ul>
+            <li>Innovative Gasket Mounted (Silicone Gasket Socks) Structure for Enhanced Typing Experience</li>
+            <li>Advanced Multi-Layered Sound Absorption Filling</li>
+            <li>Flex Cut PC Plate</li>
+            <li>Dual-Tone ABS DoubleShot Keycaps for Durability and Aesthetic Appeal</li>
+            <li>OEM Profile Keycaps for Comfortable Typing</li>
+            <li>South Facing LED per key with Single Colour White LED</li>
+            <li>Music Rythm Software Support</li>
+            <li>Software Support</li>
+            <li>Detachable Wired Type C Connectivity</li>
+            <li>Hotswappable Universal 5 Pin for Effortless Key Switch Replacement</li>
+            <li>Expertly Tuned Stabilizers for Smooth and Consistent Keystrokes</li>
+            <li>Full Keys Anti Ghosting (NKRO)</li>
+        </ul>
+    </div>
+    <div class="column">
+        <h3>column: Zeus 65</h3>
+        <ul>
+            <li><strong>Produk:</strong> Mechanical Keyboard</li>
+            <li><strong>Brand:</strong> Shadow</li>
+            <li><strong>Model:</strong> Zeus65</li>
+            <li><strong>Switch:</strong> Shadow Starry Flower - Linear</li>
+            <li><strong>Bahan:</strong> Plastic</li>
+            <li><strong>Plate:</strong> PC</li>
+            <li><strong>Tipe:</strong> Keyboard Set</li>
+            <li><strong>Lights:</strong> RGB</li>
+            <li><strong>Interface:</strong> USB Type-C</li>
+            <li><strong>Support:</strong> Windows + Mac</li>
+            <li><strong>Software:</strong> VIA</li>
+            <li><strong>Berat:</strong> 1.1 kg</li>
+            <li><strong>Size:</strong> 322.7 x 143.2 x 43.1 ± 1 mm</li>
+        </ul>
+    </div>
+
+    <header class="header-fixed">
+        <h1>Fixed Header (Lebar Tetap)</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="column-fluid">
+            <h2>Link Pembelian Barang</h2>
+            <p>Ini adalah konten dengan layout fluid. Lebar mengikuti ukuran layar.</p>
+            <p><a
+                    href="https://shopee.co.id/Shadow-ZEUS65-65-Compact-VIA-Wired-Knob-Gasket-Mount-RGB-PBT-Keycap-Mechanical-Keyboard-i.905438518.29781864873">Vortex
+                    Mono Series</a></p>
+        </div>
+
+        <div class="column-fluid">
+            <h2>Link Pembelian Barang</h2>
+            <p>Layout ini fleksibel dan responsif. Sangat cocok untuk tampilan modern.</p>
+            <p><a
+                    href="https://shopee.co.id/Shadow-ZEUS65-65-Compact-VIA-Wired-Knob-Gasket-Mount-RGB-PBT-Keycap-Mechanical-Keyboard-i.905438518.29781864873">Zeus
+                    65</a></p>
+        </div>
+    </main>
+
+    <footer class="footer-fixed">
+        <p>Fixed Footer - 960px</p>
+    </footer>
+
+    <header class="main-header">
+        <h1>Tentang HoYoverse & Kuro Games</h1>
+    </header>
+
+    <section class="grid-container">
+        <div class="card">
+            <h2>HoYoverse</h2>
+            <p>
+                HoYoverse berkomitmen untuk menyediakan pengalaman dunia virtual yang imersif bagi para pemain di
+                seluruh
+                dunia. Kami telah menghadirkan game-game populer bagi para penggemar, termasuk <strong>Genshin
+                    Impact</strong>, <strong>Honkai: Star Rail</strong>, <strong>Honkai Impact 3rd</strong>,
+                <strong>Tears
+                    of Themis</strong>, dan <strong>Zenless Zone Zero</strong>, serta berbagai konten hiburan.
+            </p>
+            <p>
+                Komunitas merupakan inti dari semua yang kami lakukan. Kami berdedikasi untuk membina komunitas
+                global yang
+                antusias dan inklusif yang menyediakan akses dan dorongan bagi orang-orang untuk berbagi hasrat
+                mereka
+                terhadap ACG melalui kreativitas dan keterampilan mereka sendiri.
+            </p>
+            <p>
+                Kami terus mengeksplorasi teknologi pengembangan game mutakhir seperti <em>cel shading</em>,
+                <em>cloud
+                    gaming</em>, dan lainnya. Operasi kami tersebar di Singapura, Montreal, Los Angeles, Tokyo,
+                Seoul, dan
+                area lainnya.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Kuro Games</h2>
+            <p>
+                Kuro Games sebelumnya dikenal sebagai Zhuhai Kuro Technology Co. Ltd. dan didirikan pada tahun 2014.
+                Pada
+                tahun 2015, mereka pindah ke Guangzhou dan berganti nama menjadi Guangzhou Kuro Technology Co.
+            </p>
+            <p>
+                Game pertama mereka, <strong>Twin Tail Battleground</strong>, dirilis pada September 2016 namun
+                dihentikan
+                pada 2018. Pada 2017, mereka mulai mengembangkan <strong>Punishing: Gray Raven</strong>, yang
+                mendapat
+                pujian luas.
+            </p>
+            <p>
+                Pada 2019, mereka menerima pendanaan $30 juta dari Hero HootSuite, memperoleh 32,5% saham. Ini
+                membantu
+                ekspansi dan pengakuan industri. Pada 2022, mereka mengumumkan <strong>Wuthering Waves</strong> dan
+                memulai
+                pengujian di Tiongkok.
+            </p>
+        </div>
+    </section>
+
+
+</div>
+
+</div>
+
+</body>
+
+</html>
