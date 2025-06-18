@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - UAS Portofolio Website Student</title>
+    <meta name="description" content="Hubungi saya - Portfolio website mahasiswa">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .navbar {
+            display: flex !important;
+        }
+
+        .menu-toggle {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: static !important;
+                width: auto !important;
+                height: auto !important;
+                background: transparent !important;
+                flex-direction: row !important;
+                justify-content: flex-end !important;
+                gap: 1.5rem !important;
+            }
+
+            .nav-link {
+                font-size: 1.4rem !important;
+            }
+
+            .header-btn {
+                display: inline-block !important;
+                margin-left: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+            }
+
+            .nav {
+                flex-direction: column !important;
+                gap: 1rem;
+                padding: 1rem 2rem !important;
+            }
+
+            .header-btn {
+                margin-left: 0 !important;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--dark-color);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 1.4rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .contact-item i {
+            font-size: 3rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="loaded">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span>UAS</span>Portofolio
+            </a>
+
+            <ul class="navbar">
+                <li><a href="IndexHtml.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Skill</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+
+            <div class="header-btn">
+                <span>INTRO</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section" style="padding-top: 12rem;">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Contact Me</h2>
+                </header>
+
+                <div class="content-grid">
+                    <aside class="sidebar">
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog.html">Skills</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <div class="main-content">
+                        <p>Jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan atau ingin bekerja sama!</p>
+
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="bx bx-envelope"></i>
+                                <h3>Email</h3>
+                                <p>student@example.com</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="bx bx-phone"></i>
+                                <h3>Phone</h3>
+                                <p>+62 123 456 789</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="bx bx-map"></i>
+                                <h3>Location</h3>
+                                <p>Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Nama</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn primary">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 UAS Portofolio Website Student. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

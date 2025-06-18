@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rafli Rahman Efendy</title>
+    <meta name="description" content="Portfolio website - Rafli Rahman Efendy">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        /* CSS Variables */
+        :root {
+            --bg-color: #1f242d;
+            --text-color: #ffffff;
+            --main-color: #00eeff;
+            --second-color: #c3c3c3;
+            --accent-color: #383528;
+            --dark-color: #141414;
+            --border-color: #3b3b3b;
+
+            --big-font: 6rem;
+            --h2-font: 3rem;
+            --p-font: 1.6rem;
+
+            --shadow: 0px 20px 40px rgba(0, 0, 0, 0.7);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(31, 36, 45, 0.9);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 120rem;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--main-color);
+        }
+
+        .navbar {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            font-size: var(--p-font);
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--main-color);
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--main-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-btn {
+            background: linear-gradient(130.08deg, var(--accent-color) 0%, #191919 100%);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .header-btn:hover {
+            background: var(--main-color);
+            color: var(--bg-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 2.8rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 12rem 0 8rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: var(--h2-font);
+            color: var(--main-color);
+            font-weight: 700;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-nav a {
+            color: var(--second-color);
+            text-decoration: none;
+            font-size: 1.6rem;
+            transition: var(--transition);
+        }
+
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            color: var(--main-color);
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-header h1 {
+            font-size: 4rem;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .profile-header p {
+            font-size: 2rem;
+            color: var(--second-color);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .info-card h3 {
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: var(--text-color);
+        }
+
+        .hobby-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .hobby-section:hover {
+            transform: translateY(-3px);
+        }
+
+        .hobby-section h3 {
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hobby-content {
+            background: rgba(0, 238, 255, 0.1);
+            padding: 1.5rem;
+            border-left: 4px solid var(--main-color);
+            border-radius: 5px;
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.8rem;
+        }
+
+        .hobby-content p {
+            color: var(--second-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer p {
+            color: var(--second-color);
+            font-size: 1.4rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 3rem;
+            }
+
+            .nav {
+                padding: 1.5rem 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --big-font: 5rem;
+                --h2-font: 2.5rem;
+                --p-font: 1.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                transition: var(--transition);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+
+            .nav-link {
+                font-size: 2.5rem;
+            }
+
+            .header-btn {
+                display: none;
+            }
+
+            :root {
+                --big-font: 4rem;
+                --h2-font: 2rem;
+            }
+
+            .profile-header h1 {
+                font-size: 3rem;
+            }
+
+            .profile-header p {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --big-font: 3.5rem;
+                --h2-font: 1.8rem;
+                --p-font: 1.4rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span>Portfolio</span>Website
+            </a>
+
+            <ul class="navbar" id="navbar">
+                <li><a href="IndexHtml.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Skill</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="header-btn">
+                <span>PROFILE</span>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="bx bx-menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>My Portfolio</h2>
+                </header>
+
+                <div class="content-grid">
+                    <aside class="sidebar">
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                                <li><a href="blog.html">Skills</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <div class="main-content">
+                        <div class="profile-header">
+                            <h1>Rafli Rahman Efendy</h1>
+                            <p>Mahasiswa Kampus Stikom PGRI Banyuwangi</p>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h3><i class="bx bx-user"></i> Informasi Pribadi</h3>
+                                <ul class="info-list">
+                                    <li>
+                                        <span class="info-label">Nama:</span>
+                                        <span class="info-value">Rafli Rahman Efendy</span>
+                                    </li>
+                                    <li>
+                                        <span class="info-label">NIM:</span>
+                                        <span class="info-value">1124102162</span>
+                                    </li>
+                                    <li>
+                                        <span class="info-label">Agama:</span>
+                                        <span class="info-value">Islam</span>
+                                    </li>
+                                    <li>
+                                        <span class="info-label">Tanggal Lahir:</span>
+                                        <span class="info-value">21 September 2002</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <h3><i class="bx bx-building"></i> Informasi Akademik</h3>
+                                <ul class="info-list">
+                                    <li>
+                                        <span class="info-label">Kampus:</span>
+                                        <span class="info-value">Stikom PGRI Banyuwangi</span>
+                                    </li>
+                                    <li>
+                                        <span class="info-label">Alamat:</span>
+                                        <span class="info-value">Jl. Bunyu No. 50 LINK Kebun Jeruk</span>
+                                    </li>
+                                    <li>
+                                        <span class="info-label">Status:</span>
+                                        <span class="info-value">Mahasiswa Aktif</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hobby-section">
+                            <h3><i class="bx bx-game"></i> Hobi Saya</h3>
+                            <div class="hobby-content">
+                                <p>
+                                    Hobi saya adalah bermain game yang bertema Open World. Di tahun 2019 pada saat COVID
+                                    dan sedang booming,
+                                    saya disebut sebagai anime lover dan banyak juga game buatan developer China yang
+                                    bagus bertema anime.
+                                    Untuk status saya sekarang sedang bermain 2 game berbeda dari satu developer yang
+                                    sama.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Portfolio Website - Rafli Rahman Efendy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('bx-menu');
+                menuIcon.classList.add('bx-x');
+            } else {
+                menuIcon.classList.remove('bx-x');
+                menuIcon.classList.add('bx-menu');
+            }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                menuIcon.classList.remove('bx-x');
+                menuIcon.classList.add('bx-menu');
+            });
+        });
+    </script>
+</body>
+
+</html>

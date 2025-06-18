@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - UAS Portofolio Website Student</title>
+    <meta name="description" content="Skills dan keahlian - Portfolio website mahasiswa">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .navbar {
+            display: flex !important;
+        }
+
+        .menu-toggle {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: static !important;
+                width: auto !important;
+                height: auto !important;
+                background: transparent !important;
+                flex-direction: row !important;
+                justify-content: flex-end !important;
+                gap: 1.5rem !important;
+            }
+
+            .nav-link {
+                font-size: 1.4rem !important;
+            }
+
+            .header-btn {
+                display: inline-block !important;
+                margin-left: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+            }
+
+            .nav {
+                flex-direction: column !important;
+                gap: 1rem;
+                padding: 1rem 2rem !important;
+            }
+
+            .header-btn {
+                margin-left: 0 !important;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .skill-item i {
+            font-size: 4rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-item h3 {
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-level {
+            background: var(--dark-color);
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--main-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="loaded">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span>UAS</span>Portofolio
+            </a>
+
+            <ul class="navbar">
+                <li><a href="IndexHtml.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link active">Skill</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="header-btn">
+                <span>INTRO</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section" style="padding-top: 12rem;">
+            <div class="container">
+                <header class="section-header">
+                    <h2>My Skills</h2>
+                </header>
+
+                <div class="content-grid">
+                    <aside class="sidebar">
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog.html">Skills</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <div class="main-content">
+                        <p>Berikut adalah keahlian yang saya miliki dalam bidang web development:</p>
+
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="bx bxl-html5"></i>
+                                <h3>HTML5</h3>
+                                <p>Struktur dan markup website yang semantic dan modern.</p>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <i class="bx bxl-css3"></i>
+                                <h3>CSS3</h3>
+                                <p>Styling dan layout website yang responsive dan menarik.</p>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <i class="bx bxl-javascript"></i>
+                                <h3>JavaScript</h3>
+                                <p>Interaktivitas dan fungsionalitas website yang dinamis.</p>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <i class="bx bx-mobile-alt"></i>
+                                <h3>Responsive Design</h3>
+                                <p>Website yang optimal di semua perangkat dan ukuran layar.</p>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 UAS Portofolio Website Student. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
