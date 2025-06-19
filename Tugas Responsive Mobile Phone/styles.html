@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Website Responsive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>PhotoGallery</h2>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Header Section -->
+        <section class="hero-header" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Responsive Photo Gallery</h1>
+                <p class="hero-subtitle">Tugas Website Responsive design featuring CSS Grid, Flexbox, and media queries
+                </p>
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn btn-primary">View Gallery</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/ZRj2mZpn/wallhaven-ex277r.png" alt="Featured keyboard" class="hero-img">
+            </div>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Our Gallery</h2>
+                    <p class="section-subtitle">Explore our collection of beautiful keyboard photography</p>
+                </header>
+
+                <!-- Photo Grid - Mobile First Design -->
+                <div class="photo-grid">
+                    <div class="photo-box">
+                        <img src="https://i.postimg.cc/ZRj2mZpn/wallhaven-ex277r.png" alt="Keycaps Keyboard"
+                            class="photo-image">
+                        <div class="photo-overlay">
+                            <h3 class="photo-title">Keycaps Keyboard</h3>
+                            <p class="photo-description">Simple keycaps keyboard</p>
+                        </div>
+                    </div>
+
+                    <div class="photo-box">
+                        <img src="https://i.postimg.cc/tgG4ZdfP/Whats-App-Image-2025-06-07-at-11-02-41-4c101453.jpg"
+                            alt="keyboard" class="photo-image">
+                        <div class="photo-overlay">
+                            <h3 class="photo-title">Keyboard Zeus65</h3>
+                            <p class="photo-description">Keyboard Zeus65 Topography Keycaps</p>
+                        </div>
+                    </div>
+
+                    <div class="photo-box">
+                        <img src="https://i.postimg.cc/Njqcps4v/pexels-esmihel-18311093.jpg" alt="pexels esmihel"
+                            class="photo-image">
+                        <div class="photo-overlay">
+                            <h3 class="photo-title">Pexels-Esmihel</h3>
+                            <p class="photo-description">Pexels-Esmihel Wallpaper</p>
+                        </div>
+                    </div>
+
+                    <div class="photo-box">
+                        <img src="https://i.postimg.cc/Y9G7dhJk/Whats-App-Image-2025-05-02-at-16-53-36-b8e4b4d1.jpg"
+                            alt="vortex Mono Series" class="photo-image">
+                        <div class="photo-overlay">
+                            <h3 class="photo-title">Vortex Mono Series75</h3>
+                            <p class="photo-description">Keyboard Vortex Mono Series</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Our Gallery</h2>
+                    <p class="about-text">
+                        Welcome to our responsive photo gallery showcasing beautiful keyboard photography.
+                        This gallery demonstrates modern web development techniques including CSS Grid,
+                        Flexbox, and mobile-first responsive design principles.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact">
+            <div class="container">
+                <p>Tugas Website Responsive design featuring Grid, Flexbox & Media Queries</p>
+                <p>&copy; 2024 PwRafli Gihup. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

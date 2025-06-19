@@ -1,0 +1,630 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Site Header Styles */
+.site-header {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  overflow: hidden;
+}
+
+/* Enhanced Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hero Header Section - Fixed sizing */
+.hero-header {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  /* Reduced from 100vh */
+  padding: 90px 2rem 3rem;
+  /* Reduced top padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  /* Reduced gap */
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+  /* Reduced max-width */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  /* Reduced from 3.5rem */
+  font-weight: 700;
+  /* Reduced from 800 */
+  margin-bottom: 1rem;
+  /* Reduced margin */
+  line-height: 1.2;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  /* Reduced from 1.25rem */
+  margin-bottom: 1.5rem;
+  /* Reduced margin */
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 400px;
+  /* Reduced from 500px */
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  background: #f9fafb;
+}
+
+/* Section Styles - Mobile optimized */
+.gallery-section {
+  padding: 3rem 0;
+  /* Reduced from 5rem */
+}
+
+.about-section {
+  padding: 3rem 0;
+  /* Reduced from 5rem */
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  /* Reduced from 4rem */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Enhanced Footer - Fixed container issue */
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: transparent;
+  /* Override container background */
+  min-height: auto;
+  /* Remove min-height constraint */
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  opacity: 0.8;
+  color: white;
+  /* Ensure text is white */
+}
+
+/* Navbar styles */
+
+.main {
+  padding: 16px;
+  margin-top: 60px;
+  /* Account for fixed navbar */
+  min-height: calc(100vh - 60px);
+}
+
+/* Container adjustments */
+.container {
+  min-height: auto;
+  /* Remove min-height constraint */
+  background-color: #f9fafb;
+  padding: 1.5rem 1rem;
+  /* Reduced padding */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* Mobile First Design - Base styles for mobile */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.photo-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+.photo-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.photo-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.photo-box:hover .photo-image {
+  transform: scale(1.05);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.photo-box:hover .photo-overlay {
+  transform: translateY(0);
+}
+
+.photo-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.photo-description {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* Media Query - Tablet (768px and up) */
+@media (min-width: 768px) {
+  .main {
+    padding: 2rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .photo-image {
+    height: 280px;
+  }
+
+  /* Responsive navbar for tablets */
+  .navbar a {
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+}
+
+/* Media Query - Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 800px;
+  }
+
+  .photo-image {
+    height: 320px;
+  }
+}
+
+/* Media Query - Large Desktop (1280px and up) */
+@media (min-width: 1280px) {
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+
+  .photo-image {
+    height: 280px;
+  }
+}
+
+/* Additional responsive typography and mobile navbar */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+}
+
+/* Mobile navbar improvements */
+@media (max-width: 600px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar a {
+    float: none;
+    display: inline-block;
+    width: auto;
+  }
+}
+
+/* Mobile Responsive Header - Enhanced */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 90px 1rem 2rem;
+    /* Reduced padding */
+    gap: 1.5rem;
+    min-height: 70vh;
+    /* Reduced height */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    /* Smaller on tablet */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    max-width: 300px;
+    /* Smaller image on mobile */
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .nav-container {
+    height: 60px;
+    /* Reduced navbar height */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-header {
+    padding: 80px 1rem 1.5rem;
+    /* Further reduced padding */
+    min-height: 60vh;
+    /* Smaller height on small phones */
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    /* Even smaller on phones */
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-image {
+    max-width: 250px;
+    /* Smaller image */
+  }
+
+  .hero-img {
+    border-radius: 15px;
+    /* Smaller border radius */
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+    height: 55px;
+    /* Even smaller navbar */
+  }
+
+  .nav-logo h2 {
+    font-size: 1.25rem;
+    /* Smaller logo */
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-header {
+    padding: 70px 0.75rem 1rem;
+    min-height: 55vh;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-image {
+    max-width: 220px;
+  }
+
+  .nav-container {
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 2rem 0;
+  }
+
+  .about-section {
+    padding: 2rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-section {
+    padding: 1.5rem 0;
+  }
+
+  .about-section {
+    padding: 1.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 200px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .footer .container {
+    padding: 0 1rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+  }
+}
