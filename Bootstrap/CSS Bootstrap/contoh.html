@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header with Button</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-circle"></div>
+            BrandName
+        </a>
+        <div class="nav-buttons">
+            <button class="nav-button">Home</button>
+            <button class="nav-button">About Us</button>
+            <button class="nav-button">Data Mining</button>
+            <button class="nav-button">Contact Us</button>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to Our Service</h1>
+        <p>Discover amazing features designed to make your life easier and more productive.</p>
+        <div class="image-container">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b2a00e4f-6d6c-4062-8e20-f0ca1aba52f1.png"
+                alt="Modern digital interface showing analytics dashboard with charts and graphs" class="hero-image" />
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function () {
+            alert('Coming soon! Our team is working on this feature.');
+        });
+    </script>
+</body>
+
+</html>
